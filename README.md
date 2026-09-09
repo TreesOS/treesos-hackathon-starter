@@ -37,7 +37,7 @@ Full details and judging: [treesos.io/hackathon.html](https://treesos.io/hackath
   starts with **RM 50** of tokens; top-ups on request (RM 50 each, no limit). Stay model-agnostic (rule 1).
 - **Database:** Supabase.
 - **Deployment:** Vercel.
-- Borrow from open-source harnesses (Pi Harness, Hermes, OpenClaw) — just credit them.
+- Borrow from open-source harnesses (Pi Harness, Hermes, OpenClaw)
 
 ## How you're judged
 
