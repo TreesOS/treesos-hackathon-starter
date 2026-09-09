@@ -27,8 +27,12 @@ If you use an AI assistant to build, that's expected — note how you used it in
 
 ## 3. Infrastructure choices
 
-- **Model:** DeepSeek or ILMU (token budget provided). Because of rule 1, put the model behind a
-  small config/adapter so it can be swapped — don't scatter provider-specific calls through the code.
+- **Model:** use **DeepSeek or ILMU** (we give you a token budget). Rule 1 says your harness must be
+  *model-agnostic*, meaning the model can be swapped without a rewrite. The simple way to do this:
+  route **every** model call through **one small file** (an "adapter") that reads the provider and API
+  key from config. Then switching DeepSeek to ILMU is a one-line config change, not a hundred edits.
+  Do **not** sprinkle provider-specific API calls throughout your code. At judging we run your harness
+  on two different models to check the swap actually works, so this is a requirement, not a nicety.
 - **Database:** Supabase recommended.
 - **Deployment:** Vercel recommended.
 - You may borrow from open-source harnesses (Pi Harness, Hermes, OpenClaw). Credit them in your README.
