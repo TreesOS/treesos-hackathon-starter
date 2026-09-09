@@ -33,7 +33,8 @@ Full details and judging: [treesos.io/hackathon.html](https://treesos.io/hackath
 
 ## Recommended stack
 
-- **Model API:** DeepSeek or ILMU (a token budget is provided). Stay model-agnostic (see rule 1).
+- **Model:** your choice of provider (DeepSeek, GPT, Claude, ILMU…) — we cover the API cost. Each team
+  starts with **RM 50** of tokens; top-ups on request (RM 50 each, no limit). Stay model-agnostic (rule 1).
 - **Database:** Supabase.
 - **Deployment:** Vercel.
 - Borrow from open-source harnesses (Pi Harness, Hermes, OpenClaw) — just credit them.

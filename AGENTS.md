@@ -27,12 +27,16 @@ If you use an AI assistant to build, that's expected — note how you used it in
 
 ## 3. Infrastructure choices
 
-- **Model:** use **DeepSeek or ILMU** (we give you a token budget). Rule 1 says your harness must be
-  *model-agnostic*, meaning the model can be swapped without a rewrite. The simple way to do this:
-  route **every** model call through **one small file** (an "adapter") that reads the provider and API
-  key from config. Then switching DeepSeek to ILMU is a one-line config change, not a hundred edits.
-  Do **not** sprinkle provider-specific API calls throughout your code. At judging we run your harness
-  on two different models to check the swap actually works, so this is a requirement, not a nicety.
+- **Model: your choice.** Pick any provider you like (DeepSeek, GPT, Claude, ILMU, whatever fits).
+  We cover the API cost. Rule 1 says your harness must be *model-agnostic*, meaning the model can be
+  swapped without a rewrite. The simple way: route **every** model call through **one small file** (an
+  "adapter") that reads the provider and API key from config. Then switching providers is a one-line
+  config change, not a hundred edits. Do **not** sprinkle provider-specific API calls throughout your
+  code. At judging we run your harness on two different models to check the swap actually works, so
+  this is a requirement, not a nicety.
+- **Tokens & cost:** each team starts with **RM 50** of API tokens (on us). Need more? Ask an
+  organiser: top-ups are **RM 50 at a time, no limit** (we'll just ask what you're spending it on).
+  Requirement 6 means your harness reports its own token cost, so keep an eye on it.
 - **Database:** Supabase recommended.
 - **Deployment:** Vercel recommended.
 - You may borrow from open-source harnesses (Pi Harness, Hermes, OpenClaw). Credit them in your README.
