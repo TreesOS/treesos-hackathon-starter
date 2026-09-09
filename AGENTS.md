@@ -58,6 +58,17 @@ Build it under (or close to) the **TreesOS** brand:
 
 ## 6. How you're judged
 
-Your public fork is your submission. A fixed evaluation runs on every fork (same benchmark task,
-same rubric, same judge) — impartial and comparable. Gate = the six requirements above; then
-scored on usefulness, creativity, presentation, token efficiency, and execution & usability.
+Your public fork is your submission. After the build, a fixed evaluation is run on every fork:
+Claude runs your harness **on the job you built it for**, then scores it — same rubric, same judge
+for everyone, so it's impartial. Gate = the six requirements above; then scored on usefulness (30),
+creativity (25), presentation (15), token efficiency (25), and execution & usability (5).
+
+## 7. Make your harness runnable (so we can judge it)
+
+We can only score what we can run. Before the deadline, make sure your fork has:
+
+- A **"Run it" section** in your README with the exact commands to run the harness on a sample input.
+- A **sample input** in the repo that represents your job (real or anonymised real data — not fabricated to look good).
+- The **model behind a config/adapter** (rule 1), so we can swap the provider and re-run without editing your code.
+
+If we can't run it, we can only score what we can read, and you can't pass the gate.
